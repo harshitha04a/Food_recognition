@@ -86,7 +86,7 @@ htt="""
 ss.markdown(htt,unsafe_allow_html=True)
 #ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
-    <h1 style ="text-align:center;"color:#158FAD;">Am I eating well??🤔</h1>
+    <h1 style ="text-align:center;"color:#008080;">Am I eating well??🤔</h1>
     </div>
     """
 ss.markdown(htm_temp,unsafe_allow_html=True)
@@ -96,11 +96,15 @@ htm_temp1="""
     """
 ss.markdown(htm_temp1,unsafe_allow_html=True)
 htm_temp2="""
-    <h3 style ="color:#AFB83B;">If you keep good food in your fridge ,you will eat good food.\nSo lets drive into what you eat...🧐🧐</h3>
+    <h3 style ="color:#AFB83B;">If you keep good food in your fridge ,you will eat good food.</h3>
     </div>
     """
 ss.markdown(htm_temp2,unsafe_allow_html=True)
-
+htm_temp3="""
+    <h3 style ="So lets drive into what you eat...🧐🧐</h3>
+    </div>
+    """
+ss.markdown(htm_temp3,unsafe_allow_html=True)
 
 
 #ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
