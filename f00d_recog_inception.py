@@ -66,11 +66,30 @@ def plot_pred_final(test_imgs):
   return fig
 
 #------streamlit starts here----------------
-
+def set_bg_hack_url():
+    '''
+    A function to unpack an image from url and set as bg.
+    Returns
+    -------
+    The background.
+    '''
+        
+    st.markdown(
+         """
+         <style>
+         .stApp {
+             background: url("https://www.digitalfoodlab.com/wp-content/uploads/2019/12/Future-MeatFOODVISOR_PHOTO_SCENE_MIXED_SALAD.jpg");
+             background-size: cover
+         }
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5")
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 
+set_bg_hack_url()
 #ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
     <h1 style ="text-align:center;"color:#048c7f;">Am I eating well??🤔</h1>
