@@ -77,7 +77,7 @@ ss.markdown(
 '''
 Every one likes food! 
 ''')
-def get_basic64_of_bin_file(f23.jpg):
+def get_basic64_of_bin_file(f23):
   with open(f23.jpg,"rb") as f:
     data=f.read()
   return base64.b64encode(data).decode()
