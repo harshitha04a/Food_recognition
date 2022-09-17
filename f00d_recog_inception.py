@@ -70,6 +70,14 @@ def plot_pred_final(test_imgs):
 model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5")
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
+st.markdown("""
+<style>
+.{
+background-color:red;
+}
+</style>
+""",
+    unsafe_allow_html=True)
 ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
     <h1 style ="text-align:center;"color:#158FAD;">Am I eating well??🤔</h1>
