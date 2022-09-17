@@ -71,7 +71,7 @@ model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 ss.set_page_config(page_title = "Food Recognition using Inception V3", layout = "wide")
-ss.title("Food Recognition using inception-V3")
+ss.title("Food Recognition using inception🥣-V3")
 
 ss.markdown(
 '''
@@ -91,7 +91,7 @@ st.markdown(
      )
 
 
-ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
+#ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
 
 
 ss.markdown('### Food Recognition step 😀- Upload Image')
