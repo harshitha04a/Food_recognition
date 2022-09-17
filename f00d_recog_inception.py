@@ -1,5 +1,5 @@
 import streamlit as ss
-
+import base64
 
 import numpy as np #standard
 import plotly.express as px  #plots and graphing lib
@@ -77,8 +77,13 @@ ss.markdown(
 '''
 Every one likes food! 
 ''')
-def add_bg_from_url():
-    st.markdown(
+def get_basic64_of_bin_file(f23.jpg):
+  with open(f23.jpg,"rb") as f:
+    data=f.read()
+  return base64.b64encode(data).decode()
+def add_bg_from_url(jpg_file):
+  bin_str=get_basic64_of_bin_file(jpg_file)
+    page_bg_image=
          """
          <style>
          body{
@@ -87,11 +92,11 @@ def add_bg_from_url():
              background-size: cover;
          }
          </style>
-         """,
-         unsafe_allow_html=True
-     )
+         """ %bin_str
+      
+         st.markdown(page_bg_image,unsafe_allow_html=True)
 
-add_bg_from_url() 
+add_bg_from_url('f23.jpg') 
 
 
 #ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
