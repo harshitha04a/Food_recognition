@@ -78,10 +78,10 @@ ss.markdown(
 Every one likes food! 
 ''')
 st.markdown(
-         f"""
+         """
          <style>
          .stApp {{
-             background-image: url("https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg");
+             background-image: url("f23.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
