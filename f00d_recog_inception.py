@@ -71,13 +71,23 @@ model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
-ss.title("Food Recognition using inception🥣-V3")
+htm_temp="""
+    <h1 style ="color:#158FAD;text-align-center;">Am I eating well??🤔</h1>
+    </div>
+    """
+ss.markdown(htm_temp,unsafe_allow_html=True)
 
-ss.markdown(
-'''
-Every one likes food🥞! \nYou are what you eat,so don't be fast ,cheap, easy, or fake..
-''')
-ss.markdown('###If you keep good food in your fridge ,you will eat good food.So lets drive into what you eat...')
+htm_temp1="""
+    <h3 style ="color:#AFB83B;">Every one likes food🥞! \nYou are what you eat,so don't be fast ,cheap, easy, or fake.🤔</h3>
+    </div>
+    """
+ss.markdown(htm_temp1,unsafe_allow_html=True)
+htm_temp2="""
+    <h3 style ="color:#AFB83B;">If you keep good food in your fridge ,you will eat good food.\nSo lets drive into what you eat...🧐🧐</h3>
+    </div>
+    """
+ss.markdown(htm_temp2,unsafe_allow_html=True)
+
 
 
 #ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
