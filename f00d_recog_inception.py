@@ -70,39 +70,20 @@ def plot_pred_final(test_imgs):
 model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5")
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
-ss.set_page_config(page_title = "Food Recognition using Inception V3", layout = "wide")
+ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 ss.title("Food Recognition using inception🥣-V3")
 
 ss.markdown(
 '''
-Every one likes food! 
+Every one likes food🥞! \nYou are what you eat,so don't be fast ,cheap, easy, or fake..
 ''')
-def get_basic64_of_bin_file(f23):
-  with open(f23.jpg,"rb") as f:
-    data=f.read()
-  return base64.b64encode(data).decode()
-def add_bg_from_url(jpg_file):
-  bin_str=get_basic64_of_bin_file(jpg_file)
-    page_bg_image=
-         """
-         <style>
-         body{
-             background-image: url("f23.jpg");
-             background-attachment: fixed;
-             background-size: cover;
-         }
-         </style>
-         """ %bin_str
-      
-         st.markdown(page_bg_image,unsafe_allow_html=True)
-
-add_bg_from_url('f23.jpg') 
+ss.markdown('###If you keep good food in your fridge ,you will eat good food.So lets drive into what you eat...')
 
 
 #ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
 
 
-ss.markdown('### Food Recognition step 😀- Upload Image')
+ss.markdown('### Food Recognition step 😄- Upload Image')
 image_path = ss.file_uploader("drop the image file here: ", type = ["jpg"])
 
 if image_path:
