@@ -84,7 +84,7 @@ htt="""
 </div>
 """
 ss.markdown(htt,unsafe_allow_html=True)
-ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
+#ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
     <h1 style ="text-align:center;"color:#158FAD;">Am I eating well??🤔</h1>
     </div>
