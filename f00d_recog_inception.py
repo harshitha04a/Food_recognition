@@ -14,6 +14,27 @@ from tensorflow.keras.layers import Dense,Input,Flatten
 from tensorflow.keras.applications.inception_v3 import InceptionV3,preprocess_input,decode_predictions
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+def set_bg_hack_url():
+    '''
+    A function to unpack an image from url and set as bg.
+    Returns
+    -------
+    The background.
+    '''
+        
+    st.markdown(
+         """
+         <style>
+         .stApp {
+             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
+             background-size: cover
+         }
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+  
+set_bg_hack_url()
 
 
 def dic_maker(arr):
@@ -51,27 +72,7 @@ def inception_no_gen(image):
   input_arr = np.array([input_arr])  # Convert single image to a batch.
   predictions = model_saved.predict(input_arr)
   return dic_maker_tuple(dic_maker(predictions))
-def set_bg_hack_url():
-    '''
-    A function to unpack an image from url and set as bg.
-    Returns
-    -------
-    The background.
-    '''
-        
-    st.markdown(
-         """
-         <style>
-         .stApp {
-             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
-             background-size: cover
-         }
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
-  
-set_bg_hack_url()
+
 
 def plot_pred_final(test_imgs):
   """
