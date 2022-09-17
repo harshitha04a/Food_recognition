@@ -76,8 +76,6 @@ htm_temp="""
     </div>
     """
 ss.markdown(htm_temp,unsafe_allow_html=True)
-ss.image("f23.png")
-
 htm_temp1="""
     <h3 style ="color:#AFB83B;">Every one likes food🥞! \nYou are what you eat,so don't be fast ,cheap, easy, or fake.🤔</h3>
     </div>
