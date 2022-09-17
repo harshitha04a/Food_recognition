@@ -73,7 +73,7 @@ target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
 
 #ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
-    <h1 style ="text-align:center;"color:#008080;">Am I eating well??🤔</h1>
+    <h1 style ="text-align:center;"color:#048c7f;">Am I eating well??🤔</h1>
     </div>
     """
 ss.markdown(htm_temp,unsafe_allow_html=True)
@@ -88,7 +88,7 @@ htm_temp2="""
     """
 ss.markdown(htm_temp2,unsafe_allow_html=True)
 htm_temp3="""
-    <h3>So lets drive into what you eat...🧐🧐</h3>
+    <h3 style="color:#AFB83B;">So lets drive into what you eat...🧐🧐</h3>
     </div>
     """
 ss.markdown(htm_temp3,unsafe_allow_html=True)
