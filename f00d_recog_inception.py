@@ -78,7 +78,7 @@ def set_bg_hack_url():
          """
          <style>
          .stApp {
-             background: url("https://www.digitalfoodlab.com/wp-content/uploads/2019/12/Future-MeatFOODVISOR_PHOTO_SCENE_MIXED_SALAD.jpg");
+             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
              background-size: cover
          }
          </style>
