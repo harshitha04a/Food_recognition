@@ -26,7 +26,7 @@ def set_bg_hack_url():
          """
          <style>
          .ssApp {
-             background: url("https://thumbs.dreamstime.com/b/healthy-clean-eating-layout-vegetarian-food-diet-nutrition-concept-various-fresh-vegetables-ingredients-salad-white-105567339.jpg");
+             background: url("f1.jpg");
              background-size: cover
          }
          </style>
