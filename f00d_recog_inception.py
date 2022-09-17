@@ -70,20 +70,7 @@ def plot_pred_final(test_imgs):
 model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5")
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
-htt="""
-<div class="waveWrapper waveAnimation">
-  <div class="waveWrapperInner bgTop">
-    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
-  </div>
-  <div class="waveWrapperInner bgMiddle">
-    <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
-  </div>
-  <div class="waveWrapperInner bgBottom">
-    <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
-  </div>
-</div>
-"""
-ss.markdown(htt,unsafe_allow_html=True)
+
 #ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
     <h1 style ="text-align:center;"color:#008080;">Am I eating well??🤔</h1>
@@ -101,7 +88,7 @@ htm_temp2="""
     """
 ss.markdown(htm_temp2,unsafe_allow_html=True)
 htm_temp3="""
-    <h3 style ="So lets drive into what you eat...🧐🧐</h3>
+    <h3>So lets drive into what you eat...🧐🧐</h3>
     </div>
     """
 ss.markdown(htm_temp3,unsafe_allow_html=True)
