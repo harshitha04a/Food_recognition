@@ -72,7 +72,7 @@ target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 st.markdown("""
 <style>
-.{
+.reportview-container {
 background-color:red;
 }
 </style>
