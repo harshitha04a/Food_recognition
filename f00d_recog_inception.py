@@ -51,21 +51,6 @@ def inception_no_gen(image):
   input_arr = np.array([input_arr])  # Convert single image to a batch.
   predictions = model_saved.predict(input_arr)
   return dic_maker_tuple(dic_maker(predictions))
-
-def plot_pred_final(test_imgs):
-  """
-  dis takes in {1:prob(1),2:prob(2)}
-  and plots a SUPER NORMIE PLOT to make it easier for SRM FACULTY(or they might flip out like the bunch of idiots they are)
-  """
-  #test_imgs = glob(image_path_custom + '/*/*.jpeg')
-  fig = make_subplots(rows = 2, cols = 2)
-  pred_list = inception_no_gen(test_imgs)
-  fig.append_trace(go.Image(z = np.array(test_imgs)),1,1)
-  fig.append_trace(go.Bar(y = list(pred_list.keys()), x = list(pred_list.values()),orientation = 'h'),1,2)
-  fig.update_layout(width = 1750, height = 800,title_text = "Custom Predictions",showlegend = False)
-  return fig
-
-#------streamlit starts here----------------
 def set_bg_hack_url():
     '''
     A function to unpack an image from url and set as bg.
@@ -85,11 +70,28 @@ def set_bg_hack_url():
          """,
          unsafe_allow_html=True
      )
+  
+set_bg_hack_url()
+
+def plot_pred_final(test_imgs):
+  """
+  dis takes in {1:prob(1),2:prob(2)}
+  and plots a SUPER NORMIE PLOT to make it easier for SRM FACULTY(or they might flip out like the bunch of idiots they are)
+  """
+  #test_imgs = glob(image_path_custom + '/*/*.jpeg')
+  fig = make_subplots(rows = 2, cols = 2)
+  pred_list = inception_no_gen(test_imgs)
+  fig.append_trace(go.Image(z = np.array(test_imgs)),1,1)
+  fig.append_trace(go.Bar(y = list(pred_list.keys()), x = list(pred_list.values()),orientation = 'h'),1,2)
+  fig.update_layout(width = 1750, height = 800,title_text = "Custom Predictions",showlegend = False)
+  return fig
+
+#------streamlit starts here----------------
+
 model_saved = tensorflow.keras.models.load_model("inception_food_rec_50epochs.h5")
 target_dict = {0:"Bread",1:"Dairy_product",2:"Dessert",3:"Egg",4:"Fried_food",
                  5:"Meat",6:"Noodles/Pasta",7:"Rice",8:"Seafood",9:"Soup",10:"veggies/Fruit"}
 
-set_bg_hack_url()
 #ss.set_page_config(page_title = "Am I eating well??🤔", layout = "wide")
 htm_temp="""
     <h1 style ="text-align:center;"color:#048c7f;">Am I eating well??🤔</h1>
