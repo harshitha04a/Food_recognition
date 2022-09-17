@@ -1,6 +1,6 @@
 # F00d_recognition
 Food recognition using streamlit with inception v3 backend
-#### Deployed at [Streamlit](https://share.streamlit.io/sirreajohn/f00d_recognition/f00d_recog_inception.py)
+#### Deployed at [Streamlit](https://harshitha04a-food-recognition-f00d-recog-inception-hh4c43.streamlitapp.com/)
 Every one likes food! This deployment recognizes 11 different classes of food using a SOTA Inception V3 Transfer Learning.\n
 
 
