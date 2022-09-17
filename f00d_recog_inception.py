@@ -27,7 +27,7 @@ def set_bg_hack_url():
          <style>
          .ssApp {
              background: url("f1.jpg");
-             background-size: cover
+             background-size: cover;
          }
          </style>
          """,
