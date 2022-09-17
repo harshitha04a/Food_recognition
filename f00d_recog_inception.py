@@ -83,7 +83,7 @@ Every one likes food!
 ss.markdown('Dataset is obtained from [kaggle](https://www.kaggle.com/trolukovich/food11-image-dataset)')
 
 
-ss.markdown('### Food Recognition step - Upload Image')
+ss.markdown('### Food Recognition step 😀- Upload Image')
 image_path = ss.file_uploader("drop the image file here: ", type = ["jpg"])
 
 if image_path:
